@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "github.com/AIPokemon/pokemon-rpc/pokedex";
+
+enum Form {
+    Base = 0;
+    Mega = 1;
+    MegaX = 2;
+    MegaY = 3;
+    GMax = 4;
+    Zygarde10 = 5;
+    Zygarde50 = 6;
+    ZygardeComplate = 7;
+};

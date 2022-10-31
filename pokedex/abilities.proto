@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/AIPokemon/pokemon-rpc/pokedex";
+
+message Ability {
+    string id = 1;
+    uint32 num = 2;
+    string name = 3;
+    float rating = 4;
+}
+
+message PokemonAbilities {
+    Ability first = 1;
+    optional Ability second = 2;
+    optional Ability hidden = 3;
+}

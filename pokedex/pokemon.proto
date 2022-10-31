@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option go_package = "github.com/AIPokemon/pokemon-rpc/pokedex";
+
+import "pokedex/types.proto";
+import "pokedex/abilities.proto";
+
+message BaseStats {
+    uint32 hp = 1;
+    uint32 atk = 2;
+    uint32 def = 3;
+    uint32 spa = 4;
+    uint32 spd = 5;
+    uint32 spe = 6;
+}
+
+message Nature {
+    string id = 1;
+    string name = 2;
+}
+
+message Pokemon {
+    string id = 1;
+    uint32 num = 2;
+    string name = 3;
+    BaseStats baseStats = 4;
+    PokemonTypes types = 5;
+    PokemonAbilities abilities = 6;
+    optional string prevoId = 7;
+    float height = 8;
+    float weight = 9;
+}
