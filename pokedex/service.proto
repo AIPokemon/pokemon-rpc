@@ -20,9 +20,9 @@ message ListPokemonRequest {
     optional string id = 1;
     optional uint32 num = 2;
     optional string name = 3;
-    optional string type = 5;
-    optional string ability = 6;
-    optional string prevoId = 7;
+    optional string type = 4;
+    optional string ability = 5;
+    optional string prevoId = 6;
 }
 
 service Pokedex {
