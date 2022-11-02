@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+option go_package = "github.com/AIPokemon/pokemon-rpc/pokedex";
+
+message MoveFlags {
+    optional bool bypasssub = 1;
+    optional bool bite = 2;
+    optional bool bullet = 3;
+    optional bool charge = 4;
+    optional bool contact = 5;
+    optional bool dance = 6;
+    optional bool defrost = 7;
+    optional bool distance = 8;
+    optional bool gravity = 9;
+    optional bool heal = 10;
+    optional bool mirror = 11;
+    optional bool allyanim = 12;
+    optional bool nonsky = 13;
+    optional bool powder = 14;
+    optional bool protect = 15;
+    optional bool pulse = 16;
+    optional bool punch = 17;
+    optional bool recharge = 18;
+    optional bool reflectable = 19;
+    optional bool snatch = 20;
+    optional bool sound = 21;
+};
+
+message Drain {
+    int32 drain = 1;
+    int64 base = 2;
+}
+
+// uturn: {
+//     num: 369,
+//     accuracy: 100,
+//     basePower: 70,
+//     category: "Physical",
+//     name: "U-turn",
+//     pp: 20,
+//     priority: 0,
+//     flags: {contact: 1, protect: 1, mirror: 1},
+//     selfSwitch: true,
+//     secondary: null,
+//     target: "normal",
+//     type: "Bug",
+//     contestType: "Cute",
+// },
+
+message Move {
+    string id = 1;
+    uint32 num = 2;
+    uint32 accuracy = 3;
+    uint32 basePower = 4;
+    string category = 5;
+    string name = 6;
+    uint32 pp = 7;
+    uint32 priority = 8;
+    string type = 9;
+    MoveFlags flags = 10;
+    string target = 11;
+    string contestType = 12;
+    optional bool isZ = 13;
+    optional Drain drain = 14;
+}
